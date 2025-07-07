@@ -1,0 +1,77 @@
+# === Node / Next.js ===
+node_modules/
+.next/
+out/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vscode/
+.DS_Store
+
+# === Python / Flask ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+.Python
+.env
+.venv/
+env/
+venv/
+ENV/
+build/
+dist/
+instance/
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# === OS / IDE ===
+*.swp
+*.swo
+*~
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# === Coverage / Testing ===
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# === Docker / Virtualization ===
+*.log
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# === Misc ===
+*.sqlite3
+*.db
+*.bak
+*.tmp
+*.log
+*.log.*
+
+# Optional: Ignore compiled TypeScript output if used
+*.tsbuildinfo
+
+# Optional: If using poetry
+poetry.lock
