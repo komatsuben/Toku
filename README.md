@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/build-passing-brightgreen?style=flat-square" />
-  <img src="https://img.shields.io/badge/frontend-v0.dev-blueviolet?style=flat-square" />
+  <img src="https://img.shields.io/badge/frontend-next.js-blueviolet?style=flat-square" />
   <img src="https://img.shields.io/badge/backend-Flask-000000?style=flat-square&logo=python" />
   <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" />
 </p>
