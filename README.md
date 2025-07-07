@@ -19,7 +19,7 @@
 - 📄 Upload any PDF file
 - 📚 Smart chapter-based chunking
 - 🧠 AI summarization per chapter
-- 🖥️ Clean, responsive UI (powered by [v0.dev](https://v0.dev))
+- 🖥️ Clean, responsive UI (powered by [next.js](https://nextjs.org) & [shadcn](https://ui.shadcn.com/))
 - 📥 Downloadable or shareable summaries (coming soon)
 
 ---
@@ -33,7 +33,7 @@
 ## 🛠️ Tech Stack
 
 ### 🧩 Frontend
-- [Next.js](https://nextjs.org/) (scaffolded using [v0.dev](https://v0.dev))
+- [Next.js](https://nextjs.org/)
 - [shadcn/ui](https://ui.shadcn.dev)
 - TailwindCSS
 - React.js
