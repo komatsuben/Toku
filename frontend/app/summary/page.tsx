@@ -2,6 +2,7 @@
 
 import React, { useMemo } from "react"
 import { FileText, Download, ChevronDown, ChevronUp } from "lucide-react"
+import ReactMarkdown from "react-markdown"
 import { Button } from "@/components/ui/button"
 import {
     Card,
@@ -102,7 +103,7 @@ function ChapterCard({ chapter }: { chapter: Chapter }) {
                     {chapter.title}
                     </CardTitle>
                     <CardDescription className="mt-2 text-gray-600">
-                    {chapter.summary}
+                    <ReactMarkdown>{chapter.summary}</ReactMarkdown>
                     </CardDescription>
                 </div>
                 <div className="ml-4 flex-shrink-0">

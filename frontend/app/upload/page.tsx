@@ -51,8 +51,10 @@ export default function UploadPage() {
     const formData = new FormData()
     formData.append("file", file)
 
+    const endpoint = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000" 
+
     try {
-      const response = await fetch("http://localhost:5000/api/summarize", {
+      const response = await fetch(`${endpoint}/api/summarize`, {
         method: "POST",
         body: formData,
       })
@@ -61,8 +63,12 @@ export default function UploadPage() {
 
       const data = await response.json()
 
-      // Assume: data = [{ id, title, summary, fullContent }]
-      setSummaries(data)
+      if (!data.summary || !Array.isArray(data.summary)) {
+        throw new Error("Invalid response from server.")
+      }
+      
+      setSummaries(data.summary)
+      
       router.push("/summary")
     } catch (error) {
       console.error("Upload error:", error)

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { FileText, Menu, Home, Upload, History, Settings, User } from "lucide-react"
+import { FileText, Menu, Home, Upload, History, Settings, User, Scale } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import {
@@ -17,12 +17,7 @@ import Link from "next/link"
 
 import { usePathname } from "next/navigation"
 
-interface NavbarProps {
-  currentView?: "upload" | "summary"
-  onNavigate?: (view: "upload" | "summary") => void
-}
-
-export function Navbar({ currentView, onNavigate }: NavbarProps) {
+export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const pathname = usePathname()
@@ -42,6 +37,11 @@ export function Navbar({ currentView, onNavigate }: NavbarProps) {
       name: "Summary",
       icon: FileText,
       href: "/summary",
+    },
+    {
+      name: "Pricing",
+      icon: Scale,
+      href: "/pricing",
     },
   ]
   

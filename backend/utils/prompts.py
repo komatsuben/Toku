@@ -1,3 +1,4 @@
+import time
 import os
 import requests
 from dotenv import load_dotenv
@@ -13,13 +14,20 @@ def summarize_chapters(chapters: list):
 
     for chapter in chapters:
         prompt = f"""
-You are an assistant that summarizes textbook-style chapters.
-Write a short bullet-point summary for the following:
+            You are an assistant that summarizes textbook-style chapters into clean, concise bullet points.
 
-Title: {chapter['title']}
+            Instructions:
+            - Do NOT include introductions or commentary.
+            - Start immediately with bullet points.
+            - Each bullet point should capture a key idea or insight.
+            - Keep it short, clear, and relevant.
+            - Use * for bullet points.
+            - Use **bold** to highlight key concepts when appropriate.
 
-Content:
-{chapter['content'][:4000]}
+            Title: {chapter['title']}
+
+            Content:
+            {chapter['content'][:4000]}
         """
 
         headers = {
@@ -53,5 +61,7 @@ Content:
             "summary": summary,
             "fullContent": chapter["content"]
         })
+
+        time.sleep(1.5)
 
     return results
