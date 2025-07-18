@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FileText, Sparkles, Scissors, Share2, Upload, Brain, Download, Github, BookOpen, Zap } from "lucide-react"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link href="/upload">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
@@ -46,9 +48,12 @@ export default function Home() {
                   <Zap className="w-4 h-4 mr-2" />
                   Try Toku Now
                 </Button>
-                <Button variant="ghost" size="lg" className="border border-gray-200 hover:bg-gray-50">
-                  Learn More
-                </Button>
+                </Link>
+                <Link href="#features">
+                  <Button variant="ghost" size="lg" className="border border-gray-200 hover:bg-gray-50">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
 
